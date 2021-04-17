@@ -24,10 +24,12 @@ $ python demo.py
 
 ```python
 >>> import pypath as pp
->>> 
->>> 
->>> 
+>>> import cv2
+>>> I_BGR = cv2.imread('images/he.png')
+>>> I_RGB = cv2.cvtColor(I_BGR, cv2.COLOR_BGR2RGB)
+>>> I_OD  = pp.convert_RGB_to_OD(I_RGB)
 ```
 
+![RGB ](./images/od_rgb_convert.png)
 ## License
 [GNU Affero General Public License v3.0](LICENSE)
