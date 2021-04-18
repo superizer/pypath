@@ -14,6 +14,7 @@ from [BreCaHAD: a dataset for breast cancer histopathological annotation and dia
 ## Installation
 ```shell
 $ git clone https://github.com/superizer/pypath.git
+$ cd pypath
 $ pip install .
 ```
 
