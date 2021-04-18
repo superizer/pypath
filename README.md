@@ -11,7 +11,11 @@ from [BreCaHAD: a dataset for breast cancer histopathological annotation and dia
 - [OpenCV](https://opencv.org)
 - [scikit-image](https://scikit-image.org)
 
-
+## Installation
+```shell
+$ git clone https://github.com/superizer/pypath.git
+$ pip install .
+```
 
 ## How to run
 ```shell
@@ -23,11 +27,11 @@ $ python demo.py
 #### *Try your first PyPath program*
 
 ```python
->>> import pypath as pp
+>>> from pypath.transform import convert_RGB_to_OD
 >>> import cv2
 >>> I_BGR = cv2.imread('images/he.png')
 >>> I_RGB = cv2.cvtColor(I_BGR, cv2.COLOR_BGR2RGB)
->>> I_OD  = pp.convert_RGB_to_OD(I_RGB)
+>>> I_OD  = convert_RGB_to_OD(I_RGB)
 ```
 
 ![RGB ](./images/od_rgb_convert.png)
