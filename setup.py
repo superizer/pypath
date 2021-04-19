@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(
-    name='pypath',
+    name='python-patho',
     version='0.1.0',    
     description='Python library for pathology image analysis',
     url='https://github.com/superizer/pypath',
@@ -13,7 +13,7 @@ setup(
     classifiers=[
         'Intended Audience :: Science/Research',
         'License :: OSI Approved :: BSD License',  
-        'Operating System :: Mac OS',
+        'Operating System :: MacOS',
         'Programming Language :: Python :: 3.6',
     ],
 )
