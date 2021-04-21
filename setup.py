@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='python-patho',
-    version='0.1.0',    
+    version='0.1.1',    
     description='Python library for pathology image analysis',
     url='https://github.com/superizer/pypath',
     author='Attasuntorn Traisuwan',

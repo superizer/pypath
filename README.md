@@ -1,6 +1,6 @@
 # PyPath
 
-![build fail](./images/build_fail.svg)
+![build fail](./images/build_pass.svg)
 [![PyPI version](https://badge.fury.io/py/python-patho.svg)](https://badge.fury.io/py/python-patho)
 [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
 
@@ -43,6 +43,13 @@ $ python demo.py
 >>> I_OD  = convert_RGB_to_OD(I_RGB)
 ```
 
-![RGB ](./images/od_rgb_convert.png)
+![RGB](./images/od_rgb_convert.png)
+
+```python
+>>> I_H, I_E = color_decon(I_RGB)
+```
+
+![CD](./images/color_decon.png)
+
 ## License
 [GNU Affero General Public License v3.0](LICENSE)
