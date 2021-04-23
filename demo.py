@@ -1,13 +1,13 @@
 import cv2
 from pypath.transform import convert_RGB_to_OD, convert_OD_to_RGB
-from pypath.stain_extractor import color_decon
+from pypath.stain_extractor import HE_color_decon
 from pypath.texture import cal_lbp
 
 I_BGR    = cv2.imread('images/he.png')
 I_RGB    = cv2.cvtColor(I_BGR, cv2.COLOR_BGR2RGB)
 I_OD     = convert_RGB_to_OD(I_RGB)
 
-I_H, I_E = color_decon(I_RGB)
+I_H, I_E = HE_color_decon(I_RGB)
 
 # convert to show true color in monitor
 I_H = cv2.cvtColor(I_H, cv2.COLOR_RGB2BGR)
