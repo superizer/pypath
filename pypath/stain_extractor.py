@@ -1,5 +1,6 @@
 import spams
 import numpy as np
+import staintools
 from pypath.transform import convert_RGB_to_OD, convert_OD_to_RGB
 
 
@@ -40,5 +41,5 @@ def IHC_color_decon(I_RGB):
    output: I_DAB, I_H
    '''
    color_img = staintools.LuminosityStandardizer.standardize(I_RGB)
-   h, dab    = color_decon(color_img)
+   h, dab    = HE_color_decon(color_img)
    return dab, h
