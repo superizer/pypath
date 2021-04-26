@@ -9,6 +9,3 @@ __author__  = 'Attasuntorn Traisuwan'
 
 
 # Bring in subpackages
-
-from pypath import transform
-from pypath import stain_extractor
