@@ -1,6 +1,6 @@
 # PyPath
 
-![build status](./images/build_fail.svg)
+![build status](./images/build_pass.svg)
 [![PyPI version](https://badge.fury.io/py/python-patho.svg)](https://badge.fury.io/py/python-patho)
 [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
 
