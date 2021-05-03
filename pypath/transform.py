@@ -32,7 +32,7 @@ def convert_OD_to_RGB(I_OD):
 def mopho_process(I_GRAY, kernels):
    '''
    Morphological processing based on modified Laplacian filtering
-   from A. Mouelhia et al. 'Fast unsupervised nuclear segmentation and classification scheme for automatic allred cancer scoring in immunohistochemical breast tissue images'
+   from A. Mouelhi et al. 'Fast unsupervised nuclear segmentation and classification scheme for automatic allred cancer scoring in immunohistochemical breast tissue images'
    input: I_GRAY, kernels
    output: cells_images
    '''
