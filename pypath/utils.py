@@ -1,6 +1,9 @@
 import numpy as np
 import cv2
 
+import matplotlib.pyplot as plt
+from matplotlib.backends.backend_agg import FigureCanvas
+
 
 def threshold(I, thresh_value):
    '''
@@ -81,3 +84,22 @@ def find_contour_area(cells_image, contours):
          area = np.sum(cells_image[y:y+h,x:x+w])
          contour_areas.append(area)
    return contour_areas
+
+def get_3d_distance_image(RGB_distance):
+   '''
+   Show 3D distance plot via image
+   input: RGB_distance
+   output:3d distance plotting image
+   '''
+   fig           = plt.figure()
+   canvas        = FigureCanvas(fig)
+   ax            = fig.gca(projection='3d')
+   dist_for_show = cv2.cvtColor(RGB_distance*255, cv2.COLOR_BGR2GRAY)
+   xx, yy        = np.mgrid[0:dist_for_show.shape[0], 0:dist_for_show.shape[1]]
+
+   ax.plot_surface(xx, yy, dist_for_show ,rstride=1, cstride=1, cmap=plt.cm.jet, linewidth=0)
+   canvas.draw()
+
+   img_3d_distance = np.array(canvas.renderer.buffer_rgba())
+
+   return img_3d_distance
