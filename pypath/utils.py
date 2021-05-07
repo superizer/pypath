@@ -103,3 +103,23 @@ def get_3d_distance_image(RGB_distance):
    img_3d_distance = np.array(canvas.renderer.buffer_rgba())
 
    return img_3d_distance
+
+def get_contours_from_labels(num_marker, labels):
+   '''
+   Generate contours labeled image 
+   input: num_marker, labels
+   output: output_contours
+   '''
+   output_contours = []
+
+   for i in range(1,num_marker+1):
+      tmp              = np.zeros(labels.shape, dtype=np.uint8)
+      tmp[labels == i] = 255
+      contours, hierarchy = cv2.findContours(tmp, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+      output_contours.append(contours)
+
+   if num_marker == 0:
+      contours, hierarchy = cv2.findContours(labels, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+      output_contours.append(contours)
+   
+   return output_contours
