@@ -33,7 +33,7 @@ def HE_color_decon(I_RGB):
 
    return I_H, I_E
 
-def IHC_color_decon(I_RGB):
+def IHC_color_decon_Vahadane(I_RGB):
    '''
    Immunohistrochemistry color deconvolution
    Using same technique as H&E image
