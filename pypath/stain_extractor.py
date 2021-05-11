@@ -4,7 +4,7 @@ import staintools
 from pypath.transform import convert_RGB_to_OD, convert_OD_to_RGB
 
 
-def HE_color_decon(I_RGB):
+def HE_color_decon_Vahadane(I_RGB):
    ''' 
    matrix Factorization using spams library
    from A. Vahadane et al. 'Structure-Preserving Color Normalization and Sparse Stain Separation for Histological Images'
@@ -41,7 +41,7 @@ def IHC_color_decon_Vahadane(I_RGB):
    output: I_DAB, I_H
    '''
    color_img = staintools.LuminosityStandardizer.standardize(I_RGB)
-   h, dab    = HE_color_decon(color_img)
+   h, dab    = HE_color_decon_Vahadane(color_img)
    return dab, h
 
 def IHC_color_decon_Mouelhi(I_RGB):
